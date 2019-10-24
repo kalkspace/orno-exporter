@@ -1,0 +1,80 @@
+Serial number 0000
+Modbus ID 0002
+Modbus Baudrate 0003
+Software Version 0004
+Hardware Version 0006
+S0 output rate 0009
+Combined Code 000B
+LCD Cycle time 000D
+L1 Voltage 000E
+L2 Voltage 0010
+L3 Voltage 0012
+Grid Frequency 0014
+L1 Current 0016
+L2 Current 0018
+L3 Current 001A
+Total Active Power 001C
+L1 Active Power 001E
+L2 Active Power 0020
+L3 Active Power 0022
+Total reactive power 0024
+L1 reactive power 0026
+L2 reactive power 0028
+L3 reactive power 002A
+Total Apparent Power 002C
+L1 Apparent Power 002E
+L2 Apparent Power 0030
+L3 Apparent Power 0032
+Total Power Factor 0034
+L1 Power Factor 0036
+L2 Power Factor 0038
+L3 Power Factor 003A
+DateTime 003C
+CRC code 0041
+Total Active Energy 0100
+L1 Total Active Energy 0102
+L2 Total Active Energy 0104
+L3 Total Active Energy 0106
+Forward Active Energy 0108
+L1 Forward Active Energy 010A
+L2 Forward Active Energy 010C
+L3 Forward Active Energy 010E
+Reverse Active Energy 0110
+L1 Reverse Active Energy 0112
+L2 Reverse Active Energy 0114
+L3 Reverse Active Energy 0116
+Total Reactive Energy 0118
+L1 Reactive Energy 011A
+L2 Reactive Energy 011C
+L3 Reactive Energy 011E
+Forward Reactive Energy 0120
+L1 Forward Reactive Energy 0122
+L2 Forward Reactive Energy 0124
+L3 Forward Reactive Energy 0126
+Reverse Reactive Energy 0128
+L1 Reverse Reactive Energy 012A
+L2 Reverse Reactive Energy 012C
+L3 Reverse Reactive Energy 012E
+T1 Total Active Energy 0130
+T1 Forward Active Energy 0132
+T1 Reverse Active Energy 0134
+T1 Total Reactive Energy 0136
+T1 Forward Reactive Energy 0138
+T1 Reverse Reactive Energy 013A
+T2 Total Active Energy 013C
+T2 Reverse Active Energy 0140
+T2 Total Reactive Energy 0142
+T2 Forward Reactive Energy 0144
+T2 Reverse Reactive Energy 0146
+T3 Total Active Energy 0148
+T3 Forward Active Energy 014A
+T3 Reverse Active Energy 014C
+T3 Total Reactive Energy 014E
+T3 Forward Reactive Energy 0150
+T3 Reverse Reactive Energy 0152
+T4 Total Active Energy 0154
+T4 Forward Active Energy 0156
+T4 Reverse Active Energy 0158
+T4 Total Reactive Energy 015A
+T4 Forward Reactive Energy 015C
+T4 Reverse Reactive Energy 015E
