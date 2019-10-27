@@ -2,7 +2,7 @@
 name: Upload release binaries
 on:
   release:
-    types: [created, published, prereleased]
+    types: [created]
 
 jobs:
   release:
