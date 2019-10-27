@@ -20,7 +20,7 @@ jobs:
             file: "orno-exporter_win.exe"
             type: "application/vnd.microsoft.portable-executable"
       fail-fast: false
-    name: Build & Upload binaries for ${{ matrix.os }}
+    name: Build & Upload binaries
     steps:
       - uses: actions/checkout@master
       - name: Build binary
