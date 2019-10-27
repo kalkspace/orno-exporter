@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build binary for ${{ matrix.os }}
-        uses: docker://golang:1.13
+        uses: docker://golang:1.13-alpine
         with:
           entrypoint: /bin/sh
           args: '-c "CGO_ENABLED=0 GOOS=${{ matrix.os }} go build -o orno_exporter main.go"'
