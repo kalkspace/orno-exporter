@@ -1,5 +1,5 @@
 ---
-name: Build and release binaries
+name: Build binaries
 on: push
 
 jobs:
@@ -9,7 +9,7 @@ jobs:
       matrix:
         os: ["linux", "darwin", "windows"]
       fail-fast: false
-    name: Build and release
+    name: Build
     steps:
       - uses: actions/checkout@master
       - name: Build binary for ${{ matrix.os }}

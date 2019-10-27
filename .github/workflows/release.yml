@@ -1,0 +1,37 @@
+on:
+  release:
+    types: [created]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch:
+          - os: "linux"
+            file: "orno-exporter"
+            type: "application/octet-stream"
+          - os: "darwin"
+            file: "orno-exporter"
+            type: "application/octet-stream"
+          - os: "windows"
+            file: "orno-exporter.exe"
+            type: "application/octet-stream"
+      fail-fast: false
+    name: Build & Upload binaries for ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@master
+      - name: Build binary
+        uses: docker://golang:1.13-alpine
+        with:
+          entrypoint: /bin/sh
+          args: '-c "CGO_ENABLED=0 GOOS=${{ matrix.arch.os }} go build -o ${{ matrix.arch.file }} main.go"'
+      - name: Upload binary
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./${{ matrix.arch.file }}
+          asset_name: ${{ matrix.arch.file }}
+          asset_content_type: ${{ matrix.arch.type }}
