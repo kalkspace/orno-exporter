@@ -1,0 +1,15 @@
+---
+name: Build and release binaries
+on: push
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: ["linux", "macos", "windows"]
+    name: Build and release
+    steps:
+      - uses: actions/checkout@master
+      - name: Build binary for ${{ matrix.os }}
+        uses: docker://golang:1.13
+        run: CGO_ENABLED=0 GOOS=${{ matrix.os }} go build -o orno_exporter main.go
