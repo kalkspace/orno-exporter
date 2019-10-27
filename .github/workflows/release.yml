@@ -13,6 +13,7 @@ jobs:
           - os: "linux"
             file: "orno-exporter_linux"
             type: "application/octet-stream"
+            configfile: "/etc/orno-exporter.conf"
           - os: "darwin"
             file: "orno-exporter_macos"
             type: "application/octet-stream"
@@ -27,7 +28,12 @@ jobs:
         uses: docker://golang:1.13-alpine
         with:
           entrypoint: /bin/sh
-          args: '-c "CGO_ENABLED=0 GOOS=${{ matrix.arch.os }} go build -o ${{ matrix.arch.file }} main.go"'
+          args: build.sh
+          env:
+            CGO_ENABLED: 0
+            GOOS: ${{ matrix.arch.os }}
+            BIN_FILE: ${{ matrix.arch.file }}
+            GO_LDFLAGS: -X github.com/kalkspace/orno-exporter/main.ConfigFile=${{ matrix.arch.configfile }}
       - name: Upload binary
         uses: actions/upload-release-asset@v1.0.1
         env:
