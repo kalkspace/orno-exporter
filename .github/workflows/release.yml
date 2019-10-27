@@ -11,14 +11,14 @@ jobs:
       matrix:
         arch:
           - os: "linux"
-            file: "orno-exporter"
+            file: "orno-exporter_linux"
             type: "application/octet-stream"
           - os: "darwin"
-            file: "orno-exporter"
+            file: "orno-exporter_macos"
             type: "application/octet-stream"
           - os: "windows"
-            file: "orno-exporter.exe"
-            type: "application/octet-stream"
+            file: "orno-exporter_win.exe"
+            type: "application/vnd.microsoft.portable-executable"
       fail-fast: false
     name: Build & Upload binaries for ${{ matrix.os }}
     steps:
