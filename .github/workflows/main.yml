@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: ["linux", "macos", "windows"]
+        os: ["linux", "darwin", "windows"]
     name: Build and release
     steps:
       - uses: actions/checkout@master
