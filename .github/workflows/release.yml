@@ -30,10 +30,10 @@ jobs:
           entrypoint: /bin/sh
           args: build.sh
           env:
-            CGO_ENABLED: 0
-            GOOS: ${{ matrix.arch.os }}
-            BIN_FILE: ${{ matrix.arch.file }}
-            GO_LDFLAGS: -X github.com/kalkspace/orno-exporter/main.ConfigFile=${{ matrix.arch.configfile }}
+            - CGO_ENABLED=0
+            - GOOS=${{ matrix.os }}
+            - BIN_FILE=${{ matrix.arch.file }}
+            - GO_LDFLAGS="-X github.com/kalkspace/orno-exporter/main.ConfigFile=${{ matrix.arch.configfile }}"
       - name: Upload binary
         uses: actions/upload-release-asset@v1.0.1
         env:

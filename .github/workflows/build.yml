@@ -18,5 +18,5 @@ jobs:
           entrypoint: /bin/sh
           args: build.sh
           env:
-            CGO_ENABLED: 0
-            GOOS: ${{ matrix.os }}
+            - CGO_ENABLED=0
+            - GOOS=${{ matrix.os }}
